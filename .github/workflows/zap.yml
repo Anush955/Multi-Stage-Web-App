@@ -36,7 +36,7 @@ jobs:
       - name: Run ZAP Baseline Scan (logs only)
         uses: zaproxy/action-baseline@v0.15.0
         with:
-          target: "https://testfire.net/"
+          target: "https://testfire.net/" 
           allow_issue_writing: false     # prevents GitHub issues
           #artifact_name: ""              # DISABLES artifact upload
           cmd_options: ""                # prevents zap.yaml permission issue
