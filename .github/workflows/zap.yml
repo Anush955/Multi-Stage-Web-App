@@ -1,29 +1,12 @@
+
 name: Simple OWASP ZAP Scan (Logs Only)
 
-on: push
- # workflow_dispatch:
+on:
+  push:
+  # workflow_dispatch:
 
 permissions:
-   contents: read
-
-jobs:
-  zap:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v5
-
-      - name: Run ZAP Baseline Scan (logs only)
-        uses: zaproxy/action-baseline@v0.15.0
-        with:
-          target: "name: Simple OWASP ZAP Scan (Logs Only)
-
-on: push
- # workflow_dispatch:
-
-permissions:
-   contents: read
+  contents: read
 
 jobs:
   zap:
@@ -36,12 +19,7 @@ jobs:
       - name: Run ZAP Baseline Scan (logs only)
         uses: zaproxy/action-baseline@v0.15.0
         with:
-          target: "https://testfire.net/" 
-          allow_issue_writing: false     # prevents GitHub issues
-          #artifact_name: ""              # DISABLES artifact upload
-          cmd_options: ""                # prevents zap.yaml permission issue
-          # fail_action: false             # scan will not fail the job"
-          allow_issue_writing: false     # prevents GitHub issues
-          #artifact_name: ""              # DISABLES artifact upload 
-          cmd_options: ""                # prevents zap.yaml permission issue
-          # fail_action: false             # scan will not fail the job
+          target: "https://testfire.net/"
+          allow_issue_writing: false
+          cmd_options: ""
+          fail_action: false
