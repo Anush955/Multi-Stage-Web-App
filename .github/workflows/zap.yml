@@ -19,6 +19,6 @@ jobs:
         with:
           target: "http://testphp.vulnweb.com/login.php"
           allow_issue_writing: false     # prevents GitHub issues
-          #artifact_name: ""              # DISABLES artifact upload
+          #artifact_name: ""              # DISABLES artifact upload 
           cmd_options: ""                # prevents zap.yaml permission issue
           # fail_action: false             # scan will not fail the job
